@@ -481,6 +481,8 @@ nav {
 .cta-button1 {
     text-align: center;
     margin-top: 20px;
+    display: flex;
+    justify-content: center; /* Center the button horizontally */
 }
 
 .cta-button1 button {
@@ -497,6 +499,7 @@ nav {
     justify-content: center;
     position: relative; /* Positioning relative for arrow adjustment */
     overflow: hidden;
+    text-align: center; /* Center the text within the button */
 }
 
 .cta-button1 button:hover {
@@ -505,7 +508,7 @@ nav {
 }
 
 .cta-button1 .cta-arrow {
-    margin-left: auto; /* Push arrow to the far right */
+    margin-left: 10px; /* Add some space between text and arrow */
     display: inline-block;
     background-color: rgba(0, 0, 0, 0.1); /* Transparent circle background to mimic design */
     border-radius: 50%; /* Circle shape */
@@ -681,14 +684,92 @@ footer {
 
 
 /* Responsive */
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
     .header-content {
         flex-direction: column;
         text-align: center;
+        padding: 40px 20px;
     }
 
     .text-content {
         max-width: 100%;
+    }
+
+    .header-image {
+        max-width: 80%;
+        margin: 20px auto;
+    }
+
+    nav {
+        margin-right: 20px;
+        margin-left: 20px;
+    }
+
+    .section-header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .section-description {
+        margin-left: 0;
+        margin-top: 20px;
+        max-width: 100%;
+    }
+
+    .business-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .business-image {
+        max-width: 100%;
+        margin: 20px 0;
+    }
+
+    .business-text {
+        max-width: 100%;
+        padding: 20px;
+    }
+
+    .product-grid,
+    .portfolio-grid,
+    .feature-grid {
+        grid-template-columns: 1fr; /* Kolom tunggal untuk tampilan tablet */
+        gap: 20px;
+    }
+
+    .footer-container {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .feature-grid {
+        grid-template-columns: 1fr; /* Kolom tunggal untuk tampilan tablet */
+    }
+
+    .feature-item {
+        padding: 30px 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    .header-content {
+        flex-direction: column;
+        text-align: center;
+        padding: 20px 10px;
+    }
+
+    .text-content {
+        max-width: 100%;
+    }
+
+    .header-image {
+        max-width: 100%;
+        margin: 10px auto;
+    }
+
+    nav {
+        margin-right: 10px;
+        margin-left: 10px;
     }
 
     .nav-links {
@@ -699,15 +780,73 @@ footer {
         display: block;
     }
 
+    .section-header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .section-description {
+        margin-left: 0;
+        margin-top: 10px;
+        max-width: 100%;
+    }
+
     .product-grid,
     .portfolio-grid,
     .feature-grid {
-        flex-direction: column;
-        align-items: center;
+        grid-template-columns: 1fr; /* Kolom tunggal untuk tampilan smartphone */
+        gap: 15px;
     }
 
-    .footer-content {
-        flex-direction: column;
+    .feature-item {
+        padding: 20px 10px;
+    }
+
+    .footer-container {
+        grid-template-columns: 1fr;
+    }
+
+    .footer-section {
+        text-align: center;
+        margin-bottom: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .main-heading,
+    .sub-heading {
+        font-size: 2.5rem;
+    }
+
+    .cta-button,
+    .cta-button1 button {
+        padding: 10px 20px;
+        font-size: 0.8rem;
+    }
+
+    .cta-button1 .cta-arrow::before {
+        font-size: 0.8rem;
+    }
+
+    .section-header h2 {
+        font-size: 1.8rem;
+    }
+
+    .portfolio-item h3,
+    .feature-item h3 {
+        font-size: 1rem;
+    }
+
+    .section-description {
+        font-size: 0.9rem;
+    }
+
+    .product-item {
+        width: 100%;
+    }
+
+    .footer-container {
+        grid-template-columns: 1fr;
         text-align: center;
     }
 }
